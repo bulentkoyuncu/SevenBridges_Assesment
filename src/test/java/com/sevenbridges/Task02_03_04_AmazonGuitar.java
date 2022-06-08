@@ -69,7 +69,7 @@ public class Task02_03_04_AmazonGuitar {
 
         // Check random element
         int randomNum =  (int)Math.floor(Math.random()*totalElements+1);
-        WebElement randomElement = driver.findElement(By.xpath("(//span[@class='a-size-base-plus a-color-base a-text-normal'])["+randomNum+"]"));
+        WebElement randomElement = driver.findElement(By.xpath("(//span[contains(@class, 'a-text-normal')])["+randomNum+"]/.."));
         // Get random elements name before click
         String expectedName = randomElement.getText();
         randomElement.click();
