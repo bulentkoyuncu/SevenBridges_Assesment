@@ -67,6 +67,7 @@ public class Task02_03_04_AmazonGuitar {
         double average = totalPrice/totalElements;
         System.out.println("Average price of "+ totalElements + " items is = $" + new DecimalFormat("#,###.00").format(average));
 
+
         // Check random element
         int randomNum =  (int)Math.floor(Math.random()*totalElements+1);
         WebElement randomElement = driver.findElement(By.xpath("(//span[contains(@class, 'a-text-normal')])["+randomNum+"]/.."));
